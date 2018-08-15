@@ -1,7 +1,12 @@
+#https://lasseclaes.com/camera-mic-api/index.html
+#http://localhost:8888/18htdocs/camera-mic-api-test/index.html
+#https://blog.prototypr.io/make-a-camera-web-app-tutorial-part-1-ec284af8dddf
+
 RewriteEngine On
-ErrorDocument 404   /18htdocs/camera-mic-API/error404.html
+ErrorDocument 404   /18htdocs/camera-mic-api-test/error404.html
+#ErrorDocument 404  https://lasseclaes.com/camera-mic-api/error404.html
 
 #Rewrite everything to https
-RewriteEngine On
-RewriteCond %{HTTPS} !=on
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#RewriteEngine On
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
