@@ -1,0 +1,7 @@
+RewriteEngine On
+ErrorDocument 404   /18htdocs/camera-mic-API/error404.html
+
+#Rewrite everything to https
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
