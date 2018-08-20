@@ -1,6 +1,7 @@
 #https://lasseclaes.com/camera-mic-api/index.html
 #http://localhost:8888/18htdocs/camera-mic-api-test/index.html
 #https://blog.prototypr.io/make-a-camera-web-app-tutorial-part-1-ec284af8dddf
+# https://htmlpreview.github.io/?https://github.com/lasseclaes/camera-mic-api-test/blob/start/index.html
 
 RewriteEngine On
 ErrorDocument 404   /18htdocs/camera-mic-api-test/error404.html

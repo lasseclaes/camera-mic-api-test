@@ -1,7 +1,9 @@
 //fra https://blog.prototypr.io/make-a-camera-web-app-tutorial-part-1-ec284af8dddf
 
 // Set constraints for the video stream
-var constraints = { video: { facingMode: "user" }, audio: false };
+//var constraints = { video: { facingMode: "user" }, audio: false };
+alert ("v1");
+var constraints = { audio: false, video: { facingMode: { exact: "environment" } } };
 // Define constants
 const cameraView = document.querySelector("#camera--view"),
     cameraOutput = document.querySelector("#camera--output"),
@@ -18,6 +20,8 @@ function cameraStart() {
     .catch(function(error) {
         console.error("Oops. Something is broken.", error);
     });
+    console.log(navigator.mediaDevices
+        .getUserMedia(constraints));
 }
 // Take a picture when cameraTrigger is tapped
 cameraTrigger.onclick = function() {
@@ -29,3 +33,4 @@ cameraTrigger.onclick = function() {
 };
 // Start the video stream when the window loads
 window.addEventListener("load", cameraStart, false);
+//document.addEventListener()
