@@ -33,5 +33,6 @@ cameraTrigger.onclick = function() {
     cameraOutput.classList.add("taken");
 };
 // Start the video stream when the window loads
-window.addEventListener("load", cameraStart, true);
+//window.addEventListener("load", cameraStart, false);
 //document.addEventListener()
+window.addEventListener("load", init, false);
