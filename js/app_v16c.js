@@ -1,7 +1,15 @@
 //fra https://blog.prototypr.io/make-a-camera-web-app-tutorial-part-1-ec284af8dddf
 
+//supported??
+const supported = 'mediaDevices' in navigator;
+
+var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+
+alert ("getUserMedia " + getUserMedia);
+
+alert ("v16c " + "supported?: " + supported);
 // Set constraints for the video stream
-alert ("v12");
+//alert ("v14a");
 var userConstraints = { video: { facingMode: "user" }, audio: false };
 var rearConstraints = { audio: false, video: { facingMode: { exact: "environment" } } };
 
@@ -31,6 +39,8 @@ function cameraStart() {
         .getUserMedia(constraints)
         .then(function(stream) {
         track = stream.getTracks()[0];
+        //console.log("track (nl)");
+        //console.log(track);
         cameraView.srcObject = stream;
     })
     .catch(function(error) {
@@ -54,4 +64,5 @@ window.addEventListener("load", init, false);
 
 function init(){
   document.getElementById('toggle-camera').addEventListener("click", function(){cameraStart()});
+  cameraStart();
 }
